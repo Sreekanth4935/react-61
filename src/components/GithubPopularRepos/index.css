@@ -1,59 +1,67 @@
-/* Write your CSS here */
-.bg-container {
+.app-container {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.responsive-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  border: solid 1px red;
-  font-family: 'red';
+  width: 80%;
 }
+
 .heading {
+  color: #0f172a;
   font-family: 'Lobster';
+  font-size: 48px;
+  margin-bottom: 48px;
 }
-.list-container {
+
+.filters-list {
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  padding-left: 0;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0px;
 }
-.ul-container {
-  font-family: 'Robot';
-}
-@media screen and (min-width: 768px) {
-  .ul-container {
-    width: 80%;
-  }
-}
-.failure-img-container {
+
+.repositories-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0px;
+  max-width: 1140px;
+}
+
+.failure-view-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
 }
+
+.failure-view-image {
+  width: 250px;
+  height: 180px;
+}
+
 @media screen and (min-width: 768px) {
-  .failure-img-container {
-    width: 80%;
+  .error-view-image {
+    width: 527px;
+    height: 393px;
   }
 }
-.failure-img {
-  /* width: 500px; */
-  width: 400px;
-  padding-top: 50px;
+
+.error-message {
+  text-align: center;
+  color: #334155;
+  font-family: 'Bree Serif';
+  font-size: 28px;
 }
+
 @media screen and (min-width: 768px) {
-  .failure-img {
-    width: 600px;
-    width: 55%;
-    padding-top: 20px;
+  .error-message {
+    font-size: 48px;
   }
-}
-.loader-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 100vh;
 }

@@ -1,33 +1,45 @@
-// Write your code here
 import './index.css'
 
-const stars = 'https://assets.ccbp.in/frontend/react-js/stars-count-img.png'
-const forks = 'https://assets.ccbp.in/frontend/react-js/forks-count-img.png '
-const openIssues =
-  'https://assets.ccbp.in/frontend/react-js/issues-count-img.png '
-
-const RespositoryItem = props => {
-  const {eachRepo} = props
-  const {forksCount, avatarUrl, issuesCount, name, starsCount} = eachRepo
+const RepositoryItem = props => {
+  const {repositoryDetails} = props
+  const {
+    name,
+    imageUrl,
+    starsCount,
+    forksCount,
+    issuesCount,
+  } = repositoryDetails
 
   return (
-    <li className="list-element">
-      <img src={avatarUrl} alt={name} className="avatar-url" />
-      <h1 className="name">{name}</h1>
-      <div className="issues-container">
-        <img src={stars} alt="stars" className="stars" />
-        <p>{` ${starsCount} stars`}</p>
+    <li className="repository-item">
+      <img className="repository-image" src={imageUrl} alt={name} />
+      <h1 className="repository-name">{name}</h1>
+      <div className="stats-container">
+        <img
+          className="stats-icon"
+          src="https://assets.ccbp.in/frontend/react-js/stars-count-img.png"
+          alt="stars"
+        />
+        <p className="stats-text">{starsCount} stars</p>
       </div>
-      <div className="issues-container">
-        <img src={forks} alt="forks" className="stars" />
-        <p>{` ${forksCount} forks`}</p>
+      <div className="stats-container">
+        <img
+          className="stats-icon"
+          src="https://assets.ccbp.in/frontend/react-js/forks-count-img.png"
+          alt="forks"
+        />
+        <p className="stats-text">{forksCount} forks</p>
       </div>
-      <div className="issues-container">
-        <img src={openIssues} alt="open issues" className="stars" />
-        <p>{` ${issuesCount} issues`}</p>
+      <div className="stats-container">
+        <img
+          className="stats-icon"
+          src="https://assets.ccbp.in/frontend/react-js/issues-count-img.png"
+          alt="open issues"
+        />
+        <p className="stats-text">{issuesCount} open issues</p>
       </div>
     </li>
   )
 }
 
-export default RespositoryItem
+export default RepositoryItem
